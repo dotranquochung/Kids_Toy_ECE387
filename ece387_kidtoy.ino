@@ -146,11 +146,6 @@ void initializeGraphics(){
     B11000,
   };
   int i;
-  // Skip using character 0, this allows lcd.print() to be used to
-  // quickly draw multiple characters
-  //for (i = 0; i < 7; ++i) {
-	//  lcd.createChar(i + 1, &graphics[i * 8]);
-  //}
   for (i = 0; i < 7; ++i) {
     lcd.createChar(i + 1, &graphics[i * 8]);
   }
@@ -358,3 +353,5 @@ void loop(){
   delay(100);
   digitalWrite(PIN_BUZZER,LOW);
 }
+
+// Source code: reference Arduino IDE hub
